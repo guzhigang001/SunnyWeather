@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 /**
  * Create by ggxz
  * 2020/6/4
- * description:
+ * description:  统一对外提供Retrofit反射得到的Service
  */
 
 object ServiceCreator {

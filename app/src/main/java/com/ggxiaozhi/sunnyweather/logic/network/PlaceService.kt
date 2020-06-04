@@ -9,7 +9,7 @@ import retrofit2.http.Query
 /**
  * Create by ggxz
  * 2020/6/4
- * description:
+ * description: 实际网络请求的接口
  */
 
 interface PlaceService {

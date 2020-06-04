@@ -33,7 +33,7 @@ object SunnyWeatherNetWork {
                 override fun onResponse(call: Call<T>, response: Response<T>) {
                     val body = response.body()
                     if (body != null) continuation.resume(body)
-                    else continuation.resumeWithException(RuntimeException("ResponseBody is null"))
+                    else continuation.resumeWithException(RuntimeException("ResponseBody is null"))//失败抛出一个异常
                 }
 
             })
