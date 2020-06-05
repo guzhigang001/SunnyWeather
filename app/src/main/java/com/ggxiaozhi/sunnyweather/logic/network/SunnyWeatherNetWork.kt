@@ -15,11 +15,21 @@ import kotlin.coroutines.suspendCoroutine
  * description:
  */
 object SunnyWeatherNetWork {
+    //地点网络请求
     private val placeService = ServiceCreator.create<PlaceService>()
+
+    private val weatherService = ServiceCreator.create<WeatherService>()
 
     //Retrofit 默认提供了await方法
     suspend fun searchPlaces(query: String) = placeService.searchPlace(query).await()
 
+    //获取实时天气
+    suspend fun getRealTimeWeather(lng: String, lat: String) =
+        weatherService.getRealTimeWeather(lng, lat).await()
+
+    //获取未来天气
+    suspend fun getDailyWeather(lng: String, lat: String) =
+        weatherService.getDailyWeather(lng, lat).await()
 
     //创建Call的扩展函数
     private suspend fun <T> Call<T>.await(): T {

@@ -10,7 +10,6 @@ import com.google.gson.annotations.SerializedName
  * url:https://api.caiyunapp.com/v2/place?query=%E5%8C%97%E4%BA%AC&token=TAkhjf8d1nlSlspN&lang=zh_CN
  */
 
-//这里好像
 data class PlaceResponse(val status: String, val places: List<Place>)
 
 data class Place(
